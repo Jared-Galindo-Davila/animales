@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    background: url('/img/MV5BZDAzN2FhMTgtMzg5YS00ZDFkLWFiMTUtZTVmMzk4ZjEyMmJmXkEyXkFqcGdeQXVyNjkzMjkzMTY@._V1_.jpg') no-repeat center center fixed;
+    background-size: cover; 
+    opacity: 0;
+    transition: opacity 10s;
+    animation: fadeIn 2s ease-in-out forwards, moveBackground 10s linear infinite;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 10px;
+    color: #fff;
+}
+
+form {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+table {
+    width: 70%;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+table, th, td {
+    border: 3px solid rgb(255, 255, 255);
+}
+
+th, td {
+    padding: 6px;
+    text-align: left;
+    color: #ffffff;
+}
+
+p {
+    border: 5px solid #000000;
+    padding: 8px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1em;
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    text-align: center;
+    color: #ffffff;
+}
+
+button {
+    margin: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: #000000;
+    background-color: cyan;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+    margin: 10px auto;
+}
+
+button:hover {
+    background-color: #00bcd4;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#generarPdfBtn {
+    display: block;
+    margin: 0 auto;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 2;
+    }
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}

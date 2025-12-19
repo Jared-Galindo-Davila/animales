@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Animales</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <h1>Gestión de Animales del Zoo</h1>
+    <form id="formularioAnimal">
+        <label for="nombreAnimal">Nombre del Animal:</label>
+        <select id="nombreAnimal" required>
+            <option value="" disabled selected>Seleccione un animal</option>
+            <option value="León" data-peso="190 kg" data-comida="Carne" data-tipo="Carnívoro">León</option>
+            <option value="Elefante" data-peso="6000 kg" data-comida="Hierba" data-tipo="Herbívoro">Elefante</option>
+            <option value="Tigre" data-peso="300 kg" data-comida="Carne" data-tipo="Carnívoro">Tigre</option>
+            <option value="Cebra" data-peso="350 kg" data-comida="Hierba" data-tipo="Herbívoro">Cebra</option>
+            <option value="Gorila" data-peso="200 kg" data-comida="Frutas" data-tipo="Herbívoro">Gorila</option>
+            <option value="Jirafa" data-peso="800 kg" data-comida="Hojas" data-tipo="Herbívoro">Jirafa</option>
+            <option value="Oso Panda" data-peso="100 kg" data-comida="Bambú" data-tipo="Herbívoro">Oso Panda</option>
+            <option value="Canguro" data-peso="85 kg" data-comida="Hierba" data-tipo="Herbívoro">Canguro</option>
+            <option value="Koala" data-peso="15 kg" data-comida="Hojas de eucalipto" data-tipo="Herbívoro">Koala</option>
+            <option value="Lobo" data-peso="45 kg" data-comida="Carne" data-tipo="Carnívoro">Lobo</option>
+            <option value="Zorro" data-peso="9 kg" data-comida="Carne" data-tipo="Carnívoro">Zorro</option>
+            <option value="Oso Polar" data-peso="450 kg" data-comida="Carne" data-tipo="Carnívoro">Oso Polar</option>
+            <option value="Rinoceronte" data-peso="2300 kg" data-comida="Hierba" data-tipo="Herbívoro">Rinoceronte</option>
+            <option value="Hipopótamo" data-peso="3200 kg" data-comida="Hierba" data-tipo="Herbívoro">Hipopótamo</option>
+            <option value="Camello" data-peso="1000 kg" data-comida="Hierba" data-tipo="Herbívoro">Camello</option>
+            <option value="Chimpancé" data-peso="70 kg" data-comida="Frutas" data-tipo="Omnívoro">Chimpancé</option>
+            <option value="Oso Negro" data-peso="150 kg" data-comida="Frutas" data-tipo="Omnívoro">Oso Negro</option>
+            <option value="Águila" data-peso="6 kg" data-comida="Carne" data-tipo="Carnívoro">Águila</option>
+            <option value="Pingüino" data-peso="35 kg" data-comida="Peces" data-tipo="Carnívoro">Pingüino</option>
+            <option value="Pavo Real" data-peso="5 kg" data-comida="Semillas" data-tipo="Omnívoro">Pavo Real</option>
+            <option value="Flamenco" data-peso="4 kg" data-comida="Peces" data-tipo="Omnívoro">Flamenco</option>
+            <option value="Búho" data-peso="2 kg" data-comida="Ratones" data-tipo="Carnívoro">Búho</option>
+            <option value="Cocodrilo" data-peso="500 kg" data-comida="Carne" data-tipo="Carnívoro">Cocodrilo</option>
+            <option value="Serpiente" data-peso="15 kg" data-comida="Ratones" data-tipo="Carnívoro">Serpiente</option>
+            <option value="Tortuga" data-peso="200 kg" data-comida="Hierba" data-tipo="Herbívoro">Tortuga</option>
+            <option value="Iguana" data-peso="5 kg" data-comida="Insectos" data-tipo="Omnívoro">Iguana</option>
+            <option value="Lemur" data-peso="4 kg" data-comida="Frutas" data-tipo="Omnívoro">Lemur</option>
+            <option value="Perezoso" data-peso="6 kg" data-comida="Hojas" data-tipo="Herbívoro">Perezoso</option>
+            <option value="Suricata" data-peso="1 kg" data-comida="Insectos" data-tipo="Omnívoro">Suricata</option>
+            <option value="Armadillo" data-peso="8 kg" data-comida="Insectos" data-tipo="Omnívoro">Armadillo</option>
+            <option value="Abeja" data-peso="0.1 kg" data-comida="Néctar" data-tipo="Omnívoro">Abeja</option>
+            <option value="Murciélago" data-peso="0.5 kg" data-comida="Insectos" data-tipo="Omnívoro">Murciélago</option>        
+        </select>
+        <br><br>
+        <button type="button" id="agregarBtn">Agregar Animal</button>
+    </form>
+    <br>
+    <table id="tablaAnimales">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Peso</th>
+                <th>Comida</th>
+                <th>Tipo</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <p>Total de Animales: <span id="totalAnimales">0</span></p>
+    <button id="generarPdfBtn">Generar PDF</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>
